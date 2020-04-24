@@ -6,7 +6,7 @@ import os
 import platform
 
 app_cache = {}
-overrides = {"code": "VSCode", "term": "Terminal", "google": "chrome"}
+overrides = {"term": "Terminal", "google": "chrome"}
 
 mod = Module()
 mod.list("running", desc="all running applications")
@@ -53,6 +53,8 @@ class Actions:
     def switcher_focus(name: str):
         """Focus a new application by  name"""
         for app in ui.apps():
+            # print("app.name:" + app.name)
+            # print("app.bundler: " + app.bundle)
             if app.name == name and not app.background:
                 app.focus()
                 break
@@ -87,8 +89,8 @@ def update_lists():
         words = get_words(name)
         for word in words:
             if word and not word in new:
-                new[word] = cur_app.name
-        new[name] = cur_app.name
+                new[word.lower()] = cur_app.name
+        new[name.lower()] = cur_app.name
     for override in overrides:
         new[override] = overrides[override]
 
