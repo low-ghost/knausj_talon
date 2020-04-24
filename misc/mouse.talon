@@ -14,7 +14,7 @@ run calibration: user.mouse_calibrate()
 	key("{modifiers}:down")
 	mouse_click(mouse_index)
 	key("{modifiers}:up")
-(dubclick | duke): 
+dubclick: 
 	mouse_click()
 	mouse_click()
 (tripclick | triplick): 
@@ -35,4 +35,4 @@ wheel right: mouse_scroll(0, 40)
 wheel tiny right: mouse_scroll(0, 20)
 curse yes: user.mouse_show_cursor()
 curse no: user.mouse_hide_cursor()
-drag: user.mouse_drag()
+mouse drag: user.mouse_drag()

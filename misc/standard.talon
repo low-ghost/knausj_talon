@@ -1,8 +1,5 @@
 dragon words: "<dgnwords>"
 dragon dictation: "<phrase>"
-slap:
-	edit.line_end()
-	key(enter)
 cd: "cd "
 #cd talon home: "cd {}\n".format(TALON_HOME),
 #cd talon user: "cd {}\n".format(TALON_USER),
@@ -13,14 +10,13 @@ grep: "grep "
 elle less: "ls "
 run L S: "ls\n"
 run (S S H | S H): "ssh"
-diff: "diff "
+#diff: "diff "
 dot pie: ".py"
 run vim: "vim "
 run make: "make\n"
 run make (durr | dear): "mkdir "
 (jay son | jason ): "json"
 (http | htp): "http"
-tls: "tls"
 M D five: "md5"
 (regex | rejex): "regex"
 args: 
@@ -29,9 +25,6 @@ args:
 [inside] (index | array): 
 	insert("[]") 
 	key(left)
-block: 
-	insert("{}") 
-	key(left enter enter up tab)
 empty array: "[]"
 comment see: "// "
 word queue: "queue"
@@ -40,9 +33,6 @@ word iter: "iter"
 word no: "NULL"
 word cmd: "cmd"
 word dup: "dup"
-word streak: 
-	insert("streq()") 
-	key(left)
 word printf: "printf"
 word shell: "shell"
 dunder in it: "__init__"
@@ -78,7 +68,7 @@ mute: key(mute)
 play next: key(next)
 play previous: key(prev)
 (play | pause): key(play_pause)  
-wipe: key(backspace)
+# wipe: key(backspace)
 (pad | padding): 
 	insert("  ") 
 	key(left)

@@ -45,3 +45,7 @@ git status: insert("git status\n")
 git tag: insert("git tag ")
 git merge <phrase>:insert("git merge {phrase}")
 
+git checkout branch: insert("git checkout -b ")
+git checkout last branch:
+    insert("git checkout -")
+    key("enter")

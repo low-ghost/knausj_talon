@@ -3,8 +3,6 @@
 <user.format_text> over: insert(format_text)
 phrase <phrase>$: dictate.lower(phrase)
 phrase <phrase> over: dictate.lower(phrase)
-(say | speak) <phrase>$: dictate.lower(phrase)
-(say | speak) <phrase> over: dictate.lower(phrase)
+text <phrase>$: dictate.lower(phrase)
+text <phrase> over: dictate.lower(phrase)
 word <word>: dictate.lower(word)
-
-
